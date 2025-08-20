@@ -14,7 +14,7 @@ jobs:
   assign-reviewers:
     runs-on: ubuntu-latest
     steps:
-      - uses: dyladan/component-owners@main
+      - uses: dyladan/component-owners@58bd86e9814d23f1525d0a970682cead459fa783 # v0.1.0
         with:
           # using this action to request review only (not assignment)
           assign-owners: false

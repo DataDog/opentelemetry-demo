@@ -15,7 +15,7 @@ jobs:
     if: github.event.pull_request.merged == true
     steps:
       - name: metal-runner-action
-        uses: equinix-labs/metal-action-runner@v0.1.1
+        uses: equinix-labs/metal-action-runner@cd22783064694c58e2eed3ef57601364f3e581e6 # v0.1.1
         with:
           github_token: ${{ secrets.GH_CI_SECRET }}
           metal_auth_token: ${{ secrets.METAL_AUTH_TOKEN }}
@@ -29,7 +29,7 @@ jobs:
     name: "Run CI"
     steps:
       - name: check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
       - name: install docker
         run: |
           curl -fsSL https://get.docker.com -o get-docker.sh
@@ -43,7 +43,7 @@ jobs:
     name: "Cleanup"
     steps:
       - name: metal-sweeper-action
-        uses: equinix-labs/metal-sweeper-action@v0.6.1
+        uses: equinix-labs/metal-sweeper-action@42cdea8d46d928c0d6314fa5c0b645547d76071a # v0.6.1
         with:
           authToken: ${{ secrets.METAL_AUTH_TOKEN }}
           projectID: ${{ secrets.METAL_PROJECT_ID }}
